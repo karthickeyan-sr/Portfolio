@@ -6,31 +6,73 @@
     <meta name="description" content="Karthickeyan S R - Data Analyst Portfolio">
     <title>Karthickeyan S R | Data Analyst</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f9;
             color: #333;
         }
+
+        /* Header Styling */
         header {
-            background-color: #1c87c9;
+            background: linear-gradient(to right, #1c87c9, #ff4d4d);
             color: white;
-            padding: 20px 0;
+            padding: 50px 0;
             text-align: center;
+            position: relative;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 4em;
+            font-weight: bold;
         }
+
         header h2 {
-            margin: 10px 0 0;
-            font-weight: normal;
+            font-size: 2em;
+            margin-top: 10px;
+            font-weight: lighter;
         }
+
+        header img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            bottom: -100px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 3D Button */
+        .cta-button {
+            background-color: #ff4d4d;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-10px) scale(1.1);
+        }
+
+        /* Navigation Styling */
         nav {
             background-color: #333;
             text-align: center;
+            padding: 15px 0;
         }
+
         nav a {
             color: white;
             display: inline-block;
@@ -38,49 +80,90 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         nav a:hover {
-            background-color: #555;
+            background-color: #ff4d4d;
         }
+
+        /* Section Styling */
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
+
         .section {
             margin-bottom: 40px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
         .section h2 {
             color: #1c87c9;
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
-            border-bottom: 2px solid #1c87c9;
-            display: inline-block;
-            padding-bottom: 5px;
         }
-        .skills ul, .experience ul, .education ul, .projects ul {
-            list-style-type: none;
-            padding: 0;
+
+        .skill-bar {
+            background-color: #e6e6e6;
+            border-radius: 5px;
+            width: 80%;
+            height: 20px;
+            overflow: hidden;
+            position: relative;
         }
-        .skills ul li, .experience ul li, .education ul li, .projects ul li {
-            background-color: white;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        .skill-bar div {
+            background-color: #1c87c9;
+            height: 100%;
+            border-radius: 5px;
+            animation: loadSkillBar 2s ease-out;
         }
+
+        @keyframes loadSkillBar {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Projects Section with Images */
+        .projects img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .projects img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
         footer {
             background-color: #1c87c9;
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
+
         footer a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -91,79 +174,73 @@
 <header>
     <h1>Karthickeyan S R</h1>
     <h2>Data Analyst</h2>
+    <img src="https://via.placeholder.com/200" alt="Profile Image">
 </header>
 
 <nav>
-    <a href="#summary">Professional Summary</a>
+    <a href="#summary">Summary</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
 </nav>
 
 <div class="container">
     <section id="summary" class="section">
         <h2>Professional Summary</h2>
-        <p>Results-driven Data Analyst with 3+ years of experience in leveraging data to drive business decisions, combined with a strong foundation in Python, R, and SQL. Proven track record in transforming data into actionable insights to enhance decision-making and business outcomes.</p>
+        <p>I am a results-driven Data Analyst with 3+ years of experience. I leverage data to drive business decisions, using Python, R, and SQL to transform data into actionable insights. Skilled in data visualization and machine learning, I create dashboards that provide clarity and impact decisions.</p>
+        <p>With a strong foundation in cloud platforms such as Microsoft Azure and AWS, I have a passion for exploring complex datasets and delivering value to stakeholders through innovative solutions.</p>
     </section>
 
     <section id="skills" class="section skills">
         <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming / Scripting:</strong> Python, R, SQL, HTML, CSS</li>
-            <li><strong>Data Analytics:</strong> Data Manipulation, Data Cleaning, EDA, Machine Learning Algorithms</li>
-            <li><strong>Data Visualisation:</strong> Power BI, Tableau, Looker Studio, Excel, Google Data Studio</li>
-            <li><strong>Cloud Platforms:</strong> Microsoft Azure, AWS, Google Cloud</li>
-            <li><strong>Tools & Experimentation:</strong> BigQuery, Azure Synapse, Snowflake, A/B Testing</li>
-        </ul>
+        <div class="skill-item">
+            <p>Python</p>
+            <div class="skill-bar"><div style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <p>R</p>
+            <div class="skill-bar"><div style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <p>SQL</p>
+            <div class="skill-bar"><div style="width: 88%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <p>Data Visualization</p>
+            <div class="skill-bar"><div style="width: 95%;"></div></div>
+        </div>
+        <div class="skill-item">
+            <p>Cloud Platforms</p>
+            <div class="skill-bar"><div style="width: 80%;"></div></div>
+        </div>
     </section>
 
-    <section id="experience" class="section experience">
+    <section id="experience" class="section">
         <h2>Professional Experience</h2>
+        <p><strong>Software Engineer (Sensor Data)</strong> - Robert Bosch, India (May 2021 – Dec 2021)</p>
         <ul>
-            <li>
-                <strong>Software Engineer (Sensor Data)</strong> - Robert Bosch, India <br> May 2021 – Dec 2021
-                <ul>
-                    <li>Spearheaded sensor data analysis using Python, R, and SQL, processing over 500,000 data points daily to identify inefficiencies.</li>
-                    <li>Developed 10+ interactive dashboards with Power BI to provide clear, actionable insights to stakeholders.</li>
-                    <li>Engineered data pipelines using BigQuery and Azure Synapse, reducing product delivery timelines by 20%.</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Systems Engineer</strong> - Infosys, India <br> May 2019 – May 2021
-                <ul>
-                    <li>Executed EDA on datasets exceeding 1 million rows, reducing manual data processing time by 12 hours per week.</li>
-                    <li>Collaborated with stakeholders to present data-driven insights using Tableau, enhancing decision-making processes.</li>
-                </ul>
-            </li>
+            <li>Processed over 500,000 data points daily using Python, R, and SQL.</li>
+            <li>Developed 10+ interactive dashboards with Power BI.</li>
+            <li>Streamlined business intelligence operations, reducing delivery timelines by 20%.</li>
         </ul>
-    </section>
 
-    <section id="education" class="section education">
-        <h2>Education</h2>
+        <p><strong>Systems Engineer</strong> - Infosys, India (May 2019 – May 2021)</p>
         <ul>
-            <li><strong>MSc Data Science</strong> - University of Birmingham, UK <br> Sep 2022 – Dec 2023 (Distinction)</li>
-            <li><strong>B.E Mechatronics Engineering</strong> - Anna University, India <br> Jun 2015 – Apr 2019 (Grade: 8.42/10)</li>
+            <li>Executed EDA on datasets exceeding 1 million rows, reducing manual processing time by 12 hours per week.</li>
+            <li>Built interactive dashboards to accelerate decision-making processes.</li>
         </ul>
     </section>
 
     <section id="projects" class="section projects">
-        <h2>Data Analysis Projects</h2>
-        <ul>
-            <li><strong>Gambling Behaviour Analysis in England</strong> - Analysed socio-economic factors impacting gambling behaviour and visualised trends to support government policy recommendations.</li>
-            <li><strong>Neuroimaging Data Warehouse</strong> - Designed a data warehouse using Python and PostgreSQL, automating ETL processes for efficient data retrieval.</li>
-            <li><strong>Esports Game Analysis</strong> - Developed interactive dashboards and ML models to predict match outcomes and visualise team performance.</li>
-        </ul>
+        <h2>Projects</h2>
+        <img src="https://via.placeholder.com/1200x400" alt="Project Image">
+        <p><strong>Gambling Behaviour Analysis</strong> - Visualized trends in gambling behaviour to assist government policy recommendations.</p>
+
+        <img src="https://via.placeholder.com/1200x400" alt="Project Image">
+        <p><strong>Esports Game Analysis</strong> - Developed ML models to predict match outcomes and visualized team performance based on social media sentiment.</p>
     </section>
 </div>
 
 <footer>
     <p>Connect with me: 
-        <a href="mailto:karthickeyan.rajasekar@gmail.com">Email</a> | 
-        <a href="https://linkedin.com/in/karthickeyan-rajasekar">LinkedIn</a> | 
-        <a href="https://github.com/karthickeyan-sr">GitHub</a>
-    </p>
-</footer>
-
-</body>
-</html>
+        <a href="mailto:karthickeyan.rajasekar@gmail.com
